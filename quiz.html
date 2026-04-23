@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}"><div class="container">
+    <h2>Quiz - {{ level }}</h2>
+
+    <form method="POST">
+        <p>Type a greeting:</p>
+        <input type="text" name="answer">
+
+        <button class="btn">Submit</button>
+    </form>
+</div>

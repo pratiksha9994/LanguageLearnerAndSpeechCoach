@@ -1,0 +1,43 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}"><div class="container">
+    <h2>Your Course</h2>
+
+    <div class="card">
+        <h3>Beginner</h3>
+        <a href="/lesson?level=beginner"><button class="btn">Start</button></a>
+    </div>
+        <h2>Beginner Course</h2>
+
+<a href="/lesson?level=beginner&module=1">Module 1: Greetings</a><br>
+<a href="/lesson?level=beginner&module=2">Module 2: Conversation</a><br>
+<a href="/lesson?level=beginner&module=3">Module 3: Personal Info</a><br>
+<a href="/lesson?level=beginner&module=4">Module 4: Numbers</a><br>
+<a href="/lesson?level=beginner&module=5">Module 5: Vocabulary</a><br>
+<a href="/lesson?level=beginner&module=6">Module 6: Grammar</a><br>
+    <div class="card">
+        <h3>Intermediate</h3>
+
+        {% if level == "beginner_completed" or level == "intermediate" %}
+            <a href="/lesson?level=intermediate">
+                <button class="btn">Start</button>
+            </a>
+        {% else %}
+            <button disabled>Locked 🔒</button>
+        {% endif %}
+    </div>
+
+    <div class="card">
+        <h3>Advanced</h3>
+
+        {% if level == "intermediate_completed" or level == "advanced" %}
+            <a href="/lesson?level=advanced">
+                <button class="btn">Start</button>
+            </a>
+        {% else %}
+            <button disabled>Locked 🔒</button>
+        {% endif %}
+    </div>
+
+</div>

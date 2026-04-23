@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}"><div class="container">
+    <h2>Lesson - {{ level }}</h2>
+
+    <ul>
+        {% for line in content %}
+            <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+<h2>Lesson</h2>
+
+{% for item in content %}
+    <p>{{ item }}</p>
+{% endfor %}
+
+<a href="/quiz?level=beginner">Take Quiz</a>

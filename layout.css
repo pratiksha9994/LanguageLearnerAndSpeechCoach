@@ -1,0 +1,28 @@
+/* CENTER EVERYTHING (LOGIN / FORMS) */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* DASHBOARD WRAPPER */
+.main {
+    padding: 20px;
+}
+
+/* FADE ANIMATION */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

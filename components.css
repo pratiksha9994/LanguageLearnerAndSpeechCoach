@@ -1,0 +1,73 @@
+/* GLASS CARD */
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+
+    transition: all 0.3s ease;
+}
+
+/* CARD HOVER */
+.card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+/* BUTTON */
+.btn {
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+/* INPUT FIELDS */
+input, select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+    border: none;
+    outline: none;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* PLACEHOLDER COLOR */
+input::placeholder {
+    color: #ddd;
+}
+
+/* SPEECH OUTPUT */
+#output {
+    font-size: 18px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#output:hover {
+    transform: scale(1.05);
+    color: #facc15;
+}

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<div class="app">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>LangApp</h2>
+        <a href="/course">Course</a><br>
+        <a href="/lesson">Lesson</a><br>
+        <a href="/quiz">Quiz</a><br>
+        <a href="/speech">Speech</a><br>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- Main -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="header">
+            <h3>Welcome {{ user }}</h3>
+            <span>Language: {{ language }}</span>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+
+            <div class="card">
+                <h3>📚 Continue Course</h3>
+                <p>Current Level: {{ level }}</p>
+                <a href="/course"><button class="btn">Go to Course</button></a>
+            </div>
+
+            <div class="card">
+                <h3>📝 Practice Quiz</h3>
+                <a href="/quiz"><button class="btn">Start Quiz</button></a>
+            </div>
+
+            <div class="card">
+                <h3>🎤 Speaking Practice</h3>
+                <a href="/speech"><button class="btn">Start Speaking</button></a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

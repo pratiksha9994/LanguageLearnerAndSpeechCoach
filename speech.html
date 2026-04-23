@@ -1,0 +1,29 @@
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}"><div class="container">
+ <h2>Speech Test</h2>
+
+<button onclick="startSpeech()">Speak</button>
+<p id="output"></p>
+
+<script>
+function startSpeech() {
+
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    if (!SpeechRecognition) {
+        alert("Not supported in this browser");
+        return;
+    }
+
+    const recognition = new SpeechRecognition();
+
+    recognition.onresult = function(event) {
+        document.getElementById("output").innerText =
+            event.results[0][0].transcript;
+    };
+
+    recognition.start();
+}
+</script>
